@@ -1,0 +1,22 @@
+<!-- templates/index.html-->
+{% extends 'base.html' %}
+{% load static %}
+    <link rel="stylesheet" href="{%static 'prise_con/home.css' %}">
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Lampes</h1>
+<div class = 'lampes'>
+    <h5>LED1 : </h5><button><a href="/led1/">ON</a></button><br>
+    <h5>LED2 : </h5><button><a href="/led1/">ON</a></button>
+
+</div>
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <button><a href="{% url 'logout' %}">Log Out</a></button>
+{% else %}
+  <p>You are not logged in</p>
+  <button><a href="{% url 'login' %}">Log In</a></button>
+{% endif %}
+{% endblock %}

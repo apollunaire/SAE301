@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class = 'lampe'>
+    <a href="/led1ON/">ON</a>   <a href="/led1OFF/">OFF</a>
+    <p>la led 1 est {{etat}}</p>
+    <a href="javascript:history.go(-1)">Retour</a>
+</div>
+{% endblock %}

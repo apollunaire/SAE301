@@ -1,0 +1,16 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+ <meta charset="utf-8">
+ <head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'prise_con/home.css' %}">
+    <title> {% block title %}Accueil{% endblock %} </title>
+</head>
+<body>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>
